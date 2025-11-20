@@ -7,8 +7,6 @@ export const ConversionService = {
 
     const originalName = file.name.replace(/\.[^.]+$/, "");
     const outputFilename = `${originalName}.${targetFormat}`;
-
-    console.log("targetFormat en ConversionService:", targetFormat);
     try {
       const convertedBuffer = await CloudConvertRepository.convert({
         buffer,
