@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* 🌞 MODO CLARO */
+:root {
+  --bg: #f3f4f6;
+  --card: #ffffff;
+  --text: #111827;
+  --border: #d1d5db;
+
+  --header-bg: #e0e3ea;
+  --header-fg: #0f172a;   
+
+  --footer-bg: #e0e3ea;
+  --footer-fg: #0f172a;  
+}
+
+/* 🌙 MODO OSCURO */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0a0a0a;
+    --card: #0f172a;
+    --text: #e5e7eb;
+    --border: #1f2937;
+
+    --header-bg: #0d1117; 
+    --header-fg: #e2e8f0;
+
+    --footer-bg: #0d1117;
+    --footer-fg: #94a3b8;
+  }
+}
+
+/* 🔥 Aplicar */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+/* 🔊 Animación de olas de audio */
+.wave {
+  animation: wave 1s ease-in-out infinite;
+}
+
+.wave:nth-child(1) { animation-delay: 0s; }
+.wave:nth-child(2) { animation-delay: 0.15s; }
+.wave:nth-child(3) { animation-delay: 0.30s; }
+.wave:nth-child(4) { animation-delay: 0.45s; }
+.wave:nth-child(5) { animation-delay: 0.60s; }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
