@@ -7,18 +7,17 @@ const MAX_SIZE = 100 * 1024 * 1024; // 100MB
 const allowedMimeTypes: Record<string, string[]> = {
   mp3: ["audio/mpeg"],
   wav: ["audio/wav", "audio/x-wav"],
-  ogg: ["audio/ogg"],
   m4a: ["audio/mp4", "audio/x-m4a"],
-  aac: ["audio/aac", "audio/x-aac"],
+  aac: ["audio/aac", "audio/x-aac", "audio/vnd.dlna.adts"],
   flac: ["audio/flac", "audio/x-flac"],
   mp4: ["audio/mp4", "video/mp4"], // algunos navegadores lo marcan como video/mp4
 };
 
 // Extensiones permitidas para SUBIR
-const allowedUploadedFormats = ["mp3", "wav", "ogg", "m4a", "aac", "flac", "mp4"];
+const allowedUploadedFormats = ["mp3", "wav", "m4a", "aac", "flac", "mp4"];
 
 // Extensiones permitidas para SALIDA
-const allowedTargetFormats = ["mp3", "wav", "ogg", "m4a", "aac", "flac"];
+const allowedTargetFormats = ["mp3", "wav", "m4a", "aac", "flac"];
 
 export async function POST(req: Request) {
   try {

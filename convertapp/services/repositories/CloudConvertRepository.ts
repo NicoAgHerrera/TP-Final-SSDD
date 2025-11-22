@@ -18,7 +18,6 @@ export const CloudConvertRepository = {
     const audioCodecMap: Record<string, string | null> = {
       mp3: "mp3",
       wav: null,
-      ogg: "vorbis",
       m4a: "aac",
       aac: "aac",
       flac: "flac",

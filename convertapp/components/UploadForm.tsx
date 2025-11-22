@@ -5,10 +5,10 @@ import { ArrowUpTrayIcon } from "@heroicons/react/24/solid";
 import { useConversion } from "../contexts/ConversionContext";
 
 // Formatos permitidos para SUBIR (puede incluir mp4)
-const allowedUploadedFormats = ["mp3", "wav", "ogg", "m4a", "aac", "flac", "mp4"];
+const allowedUploadedFormats = ["mp3", "wav", "m4a", "aac", "flac", "mp4"];
 
 // Formatos permitidos para CONVERTIR (audio → audio)
-const allowedTargetFormats = ["mp3", "wav", "ogg", "m4a", "aac", "flac"];
+const allowedTargetFormats = ["mp3", "wav", "m4a", "aac", "flac"];
 
 const MAX_SIZE = 100 * 1024 * 1024; // 100MB
 
